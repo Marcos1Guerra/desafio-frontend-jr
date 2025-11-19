@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎯 Desafio Frontend Junior - Card de Perfil
 
-## Getting Started
+Este repositório contém a solução para o desafio técnico da **Frontend Fusion**. O objetivo foi desenvolver um componente de **Card de Perfil** interativo, responsivo e fiel ao design proposto no Figma.
 
-First, run the development server:
+**Status do Projeto:** ✅ Concluído
 
+---
+
+## 🔗 Deploy
+
+Acesse o projeto online clicando abaixo:  
+👉 [Link da Vercel Aqui](https://desafio-frontend-jr-livid.vercel.app/)
+
+---
+
+## ✨ Funcionalidades
+
+- **Card Reutilizável:** Componente `CardProduto` estruturado para receber dados dinâmicos.  
+- **Interatividade:** Botão "Seguir" com gerenciamento de estado (`useState`), alternando entre estilos e textos ("Seguir" / "Seguindo").  
+- **Responsividade:** Layout adaptável para dispositivos móveis e desktop usando classes do Tailwind (`flex-col`, `md:flex-row`, etc).  
+- **Otimização:** Uso do componente `<Image />` do Next.js para carregamento otimizado de imagens.  
+- **Testes Automatizados:** Cobertura de testes para garantir a renderização correta e a lógica do botão.  
+
+---
+
+## 🧪 Testes Unitários
+
+Um dos diferenciais deste projeto é a implementação de **testes unitários**.  
+O ambiente foi configurado para utilizar o **SWC** (compilador nativo do Next.js) ao invés do Babel, garantindo maior performance.
+
+Os testes cobrem:
+
+- Renderização das informações do perfil (Nome, Cargo, Estatísticas)  
+- Presença e acessibilidade da imagem (Alt text)  
+- Estado inicial do botão  
+- Mudança de estado visual e textual ao clicar no botão  
+
+Para rodar localmente:
 ```bash
+# Clone o repositório
+git clone https://github.com/SEU-USUARIO/NOME-DO-REPO.git
+
+# Instale dependências
+npm install
+
+# Execute o servidor
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Acesse http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Para rodar os testes:
+```bash
+npm run test
+```
