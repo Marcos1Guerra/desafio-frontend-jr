@@ -2,8 +2,6 @@
 
 Este repositório contém a solução para o desafio técnico da **Frontend Fusion**. O objetivo foi desenvolver um componente de **Card de Perfil** interativo, responsivo e fiel ao design proposto no Figma.
 
-**Status do Projeto:** ✅ Concluído
-
 ---
 
 ## 🔗 Deploy
@@ -38,7 +36,7 @@ Os testes cobrem:
 Para rodar localmente:
 ```bash
 # Clone o repositório
-git clone https://github.com/SEU-USUARIO/NOME-DO-REPO.git
+git clone https://github.com/Marcos1Guerra/desafio-frontend-jr
 
 # Instale dependências
 npm install
