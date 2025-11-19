@@ -1,0 +1,232 @@
+* {
+  user-select: none;
+}
+
+.card-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100svh;
+  overflow: hidden;
+}
+
+.card-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  --c: 7px;
+  background-color: #000;
+  background-image: radial-gradient(circle at 50% 50%, #0000 1.5px, #000 0 var(--c), #0000 var(--c)),
+    radial-gradient(circle at 50% 50%, #0000 1.5px, #000 0 var(--c), #0000 var(--c)),
+    radial-gradient(circle at 50% 50%, #f00, #f000 60%),
+    radial-gradient(circle at 50% 50%, #ff0, #ff00 60%),
+    radial-gradient(circle at 50% 50%, #0f0, #0f00 60%),
+    radial-gradient(ellipse at 50% 50%, #00f, #00f0 60%);
+  
+  background-size:
+    12px 20.7846px,
+    12px 20.7846px,
+    200% 200%,
+    200% 200%,
+    200% 200%,
+    200% 20.7846px;
+  
+  --p: 0px 0px, 6px 10.39230485px;
+  background-position: var(--p), 0% 0%, 0% 0%, 0% 0px;
+  
+  animation:
+    wee 40s linear infinite,
+    filt 6s linear infinite;
+}
+
+@keyframes filt {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes wee {
+  0% {
+    background-position:
+      var(--p),
+      800% 400%,
+      1000% -400%,
+      -1200% -600%,
+      400% 41.5692194px;
+  }
+  to {
+    background-position:
+      var(--p),
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%;
+  }
+}
+
+.card {
+  width: 350px;
+  height: 350px;
+  background: #f5f5f5;
+  padding: 2rem 1.5rem;
+  border-radius: 15px;
+  transition: 0.4s ease;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s ease;
+}
+
+.card-avatar img {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  transition: 0.4s ease;
+  margin-bottom: 1rem;
+}
+
+.card-social {
+  transform: translateY(200%);
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  opacity: 0;
+  transition: transforme 0.4s ease, opacity 0.4s ease;
+}
+
+.card-social p{
+  color: fff;
+}
+
+.bio li {
+  margin-top: 20px;
+  color: #202020;
+  text-align: center;
+}
+
+.card-social__item {
+  list-style: none;
+}
+
+.card-social__item svg {
+  display: block;
+  height: 18px;
+  width: 18px;
+  cursor: pointer;
+}
+
+.card-title {
+  color: #000;
+  font-size: 1.3em;
+  font-weight: 600;
+  line-height: 2rem;
+}
+
+.card-subtitle {
+  color: #859ba8;
+  font-size: 0.8em;
+}
+
+.card-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card-flex p {
+  color: #000;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.card-flex p b {
+  font-size: 1.2em;
+}
+
+.card-button svg {
+  height: 18px;
+  width: 18px;
+}
+
+.follow-button {
+  background-color: #007bff;
+  border: none;
+  padding: 0.7rem 0.3rem;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 130px;
+  transition: all 0.3s ease;
+}
+
+.follow-button2 {
+  background-color: #00804f;
+  border: none;
+  padding: 0.7rem 0.3rem;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 130px;
+  transition: all 0.3s ease;
+}
+
+.button2 {
+  background-color: #005e3a;
+  border: none;
+  padding: 0.7rem 0.3rem;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 130px;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.button2:active,
+.button2:hover {
+  background-color: #007bff;
+}
+
+.card:hover,
+.card:focus-within {
+  box-shadow: 0 8px 50px #23232333;
+  height: 480px;
+}
+
+.card:hover .card-info,
+.card:focus-within .card-info {
+  transform: translateY(-5%);
+}
+
+.card:hover .card-social,
+.card:active .card-social,
+.card:focus-within .card-social {
+  transform: translateY(10%);
+  opacity: 1;
+}
+
+.card:not(:hover) .card-social {
+  transition: transform 0.4s ease, opacity 0.1s ease;
+}
+
+.card-social__item svg:hover {
+  fill: #232323;
+  transform: scale(1.1);
+}
